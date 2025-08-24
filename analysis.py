@@ -3,6 +3,12 @@ import argparse
 import cv2
 import os
 import numpy as np
+import sys
+
+# コマンドライン引数を取得（0番目はスクリプト名）
+args = sys.argv
+analyzFolder = args[1]
+
 
 # ap = argparse.ArgumentParser()
 # ap.add_argument("-i", "--images", required=True,
@@ -82,6 +88,7 @@ for image_path in paths.list_images("G:\マイドライブ\画像"):
             write_image(image_path, image)
             # write_image(image_path, laplacian, "/laplacian")    
     
+
 
 
 
